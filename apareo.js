@@ -1,8 +1,12 @@
 const fs = require('fs')
 
+//TEST
+
 //leerArchivoComoString('./in/10NumerosOrdenadosEntre1y50(setA).in')
 //escribirTextoEnArchivo ('hola.txt', 'texto test', true );
-transformarStringEnArrayDeNumeros ('12|34|56' , '|')
+//transformarStringEnArrayDeNumeros ('12|34|56' , '|')
+
+
 /**
  * lee y devuelve el contenido de un archivo como texto en 'utf-8'
  * @param {string} ruta 
@@ -53,8 +57,6 @@ function transformarStringEnArrayDeNumeros(str, separador) {
                } 
          }
      console.log(number)
-       
-    
 }
 
 /**
@@ -64,6 +66,14 @@ function transformarStringEnArrayDeNumeros(str, separador) {
  * @returns {string} el nuevo string
  */
 function transformarArrayDeNumerosAUnSoloString(arr, separador) {
+    var newstring
+    for (var i = 0; i < arr.length; i++){
+        newstring[newstring.length] = arr[i] 
+        newstring[newstring.length] = separador
+       
+    }
+    console.log(newstring)
+
 }
 
 /**
@@ -73,6 +83,7 @@ function transformarArrayDeNumerosAUnSoloString(arr, separador) {
  * @returns {number[]} un nuevo array de números ordenados
  */
 function combinarDosArrays(arrA, arrB) {
+
 }
 
 /**
@@ -89,6 +100,13 @@ function combinarNArrays(arrs) {
  * @returns {number} el indice del menor valor
  */
 function findMin(valores){
+    var minvalor = valores[0]
+    for (var i = 0; i < valores.length; i++){
+        if (valores[i] > minvalor){
+            minvalor = valores[i]
+        } 
+    }
+    console.log(minvalor)
 }
 
 function actualizarIndicesYValores(indices, valores, arrs, min) {
